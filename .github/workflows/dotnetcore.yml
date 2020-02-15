@@ -12,15 +12,10 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.108
+        dotnet-version: 3.0
     - name: Build with dotnet
       run: |
-        sudo add-apt-repository universe
-        sudo apt-get update
-        sudo apt-get install apt-transport-https
-        sudo apt-get update
-        sudo apt-get install dotnet-sdk-3.0 dotnet-runtime-3.0
-
+        
         wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
         wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
