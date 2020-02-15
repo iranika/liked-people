@@ -14,7 +14,7 @@ let id = Environment.GetEnvironmentVariable("TWITTER_ID")
 let pass = Environment.GetEnvironmentVariable("TWITTER_PASSWD")
 canopy.configuration.chromeDir <- "."
 //start an instance of chrome
-start ChromeHeadless
+start chrome
 //go to tweetdeck
 url "https://tweetdeck.twitter.com/"
 sleep 3
