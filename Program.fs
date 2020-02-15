@@ -12,8 +12,6 @@ open Newtonsoft.Json
 
 let id = Environment.GetEnvironmentVariable("TWITTER_ID")
 let pass = Environment.GetEnvironmentVariable("TWITTER_PASSWD")
-printfn "%s" id
-printfn "%s" pass
 canopy.configuration.chromeDir <- "."
 //start an instance of chrome
 start ChromeHeadless
