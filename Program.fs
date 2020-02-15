@@ -10,7 +10,7 @@ open System.Runtime.Serialization
 open Newtonsoft.Json
 
 
-canopy.configuration.chromeDir <- "./fsx"
+canopy.configuration.chromeDir <- "."
 //start an instance of chrome
 start chrome
 //go to tweetdeck
