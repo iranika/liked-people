@@ -1,5 +1,6 @@
 ﻿open canopy.runner.classic
 open canopy.classic
+open canopy.types
 open canopy.configuration
 open OpenQA.Selenium
 open FSharp.Data
@@ -12,7 +13,7 @@ open Newtonsoft.Json
 
 canopy.configuration.chromeDir <- "."
 //start an instance of chrome
-start chrome
+start ChromeHeadless
 //go to tweetdeck
 url "https://tweetdeck.twitter.com/"
 sleep 3

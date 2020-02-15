@@ -24,7 +24,7 @@ jobs:
         sudo apt-get install google-chrome-stable xvfb
         dotnet add package canopy --version 2.1.0
         dotnet add package Selenium.WebDriver.ChromeDriver
-        DISPLAY=:1 xvfb-run dotnet run
+        dotnet run
         cat Liked.json
 
 
