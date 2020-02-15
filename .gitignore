@@ -1,0 +1,6 @@
+fsx/paket.lock
+fsx/paket-files/*
+fsx/packages/*
+bin/*
+obj/*
+setEnv.ps1
