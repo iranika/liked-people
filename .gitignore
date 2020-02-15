@@ -4,3 +4,5 @@ fsx/packages/*
 bin/*
 obj/*
 setEnv.ps1
+fsx/*
+.ionide/symbolCache.db
