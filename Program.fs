@@ -15,9 +15,10 @@ canopy.configuration.chromeDir <- "."
 start chrome
 //go to tweetdeck
 url "https://tweetdeck.twitter.com/"
-
+sleep 3
 //login
 click "Log in"
+sleep 3
 "#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(6) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << Environment.GetEnvironmentVariable("TWITTER_ID")
 "#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(7) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << Environment.GetEnvironmentVariable("TWITTER_PASSWD")
 click "#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(8) > div > div"
