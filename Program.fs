@@ -10,7 +10,10 @@ open System.Runtime.Serialization.Json
 open System.Runtime.Serialization
 open Newtonsoft.Json
 
-
+let id = Environment.GetEnvironmentVariable("TWITTER_ID")
+let pass = Environment.GetEnvironmentVariable("TWITTER_PASSWD")
+printfn "%s" id
+printfn "%s" pass
 canopy.configuration.chromeDir <- "."
 //start an instance of chrome
 start ChromeHeadless
@@ -19,9 +22,10 @@ url "https://tweetdeck.twitter.com/"
 sleep 3
 //login
 click "Log in"
-sleep 3
-"#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(6) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << Environment.GetEnvironmentVariable("TWITTER_ID")
-"#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(7) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << Environment.GetEnvironmentVariable("TWITTER_PASSWD")
+sleep 5
+
+"#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(6) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << id
+"#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(7) > label > div.css-1dbjc4n.r-18u37iz.r-16y2uox.r-1wbh5a2.r-1udh08x > div > input" << pass
 click "#react-root > div > div > div.css-1dbjc4n.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > form > div > div:nth-child(8) > div > div"
 
 //click いいねコレクションの一番上
