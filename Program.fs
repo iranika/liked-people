@@ -31,10 +31,11 @@ match isChallenge with
   | Some(_) -> 
     "#challenge_response" << mail
     click "#email_challenge_submit"
+  | None -> printfn "チェックなし"
 
-sleep 3
 //click いいねコレクションの一番上
 click "#container > div > section:nth-child(1) > div > div:nth-child(1) > div.js-column-content.column-content.flex-auto.position-rel.flex.flex-column.height-p--100 > div.js-column-scroller.js-dropdown-container.column-scroller.position-rel.scroll-v.flex-auto.height-p--100.scroll-styled-v > div > article:nth-child(1) > div > div > div.tweet-body.js-tweet-body > p"
+
 //そのツイートのいいねしたユーザ一覧
 sleep 3 //おまじない(おそらく仮想DOMに起因？)
 click "#container > div > section.js-column.column.will-animate.is-shifted-1.js-column-state-detail-view > div > div.js-column-detail.column-detail.column-panel.flex.flex-column.height-p--100 > div > div > div > div.js-tweet-detail.tweet-detail-wrapper > article > div > div.js-tweet.tweet-detail > footer > div > div.js-stats-list.tweet-stats.flex.flex-row.flex-align--baseline.flex-wrap--wrap > div:nth-child(3) > span"
@@ -50,4 +51,5 @@ let LikedGuys =
 //Jsonとして保存
 printfn "%O" LikedGuys
 File.WriteAllText("Liked.json", JsonConvert.SerializeObject(LikedGuys))
+File.WriteAllText("Liked.js", "var LikedGuys = " + JsonConvert.SerializeObject(LikedGuys))
 quit()
