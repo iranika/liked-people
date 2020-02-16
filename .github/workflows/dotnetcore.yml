@@ -17,6 +17,7 @@ jobs:
       env: # Or as an environment variable
         TWITTER_ID: ${{ secrets.TWITTER_ID }}
         TWITTER_PASSWD: ${{ secrets.TWITTER_PASSWD}}
+        MAIL: ${{ secrets.MAIL}}
       run: |
         wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
