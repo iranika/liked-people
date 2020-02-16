@@ -32,6 +32,7 @@ match isChallenge with
     "#challenge_response" << mail
     click "#email_challenge_submit"
 
+sleep 3
 //click いいねコレクションの一番上
 click "#container > div > section:nth-child(1) > div > div:nth-child(1) > div.js-column-content.column-content.flex-auto.position-rel.flex.flex-column.height-p--100 > div.js-column-scroller.js-dropdown-container.column-scroller.position-rel.scroll-v.flex-auto.height-p--100.scroll-styled-v > div > article:nth-child(1) > div > div > div.tweet-body.js-tweet-body > p"
 //そのツイートのいいねしたユーザ一覧
