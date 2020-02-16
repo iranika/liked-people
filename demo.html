@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-store">
-  <meta http-equiv="Pragma" content="no-cache">
   <title>愛されています道草屋</title>
 </head>
 <body>
   <h1>デモページ</h1>
   <p>道草屋を愛している旦那様たち。Like.jsonのアイコン一覧を表示しています(更新は現在不定期)。ホバーで名前が出てきます。</p>
   <div id="view"></div>
-  <script src="Liked.js"></script>
+  <script src="Liked.js?p=(new Date()).getTime()"></script>
   <script>
     LikedGuys.map((user) => {
       document.getElementById("view").innerHTML += `
